@@ -1,0 +1,20 @@
+﻿@model IEnumerable<TestTask.Models.Message>
+
+
+<table>
+        <tr>
+            <td>@Html.Label("User ID")</td>
+            <td>@Html.Label("Message")</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Text)
+                </td>
+            </tr>}
+    </table>
+
